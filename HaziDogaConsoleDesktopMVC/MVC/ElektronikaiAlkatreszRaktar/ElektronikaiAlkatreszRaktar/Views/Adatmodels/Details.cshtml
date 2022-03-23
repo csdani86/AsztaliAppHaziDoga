@@ -1,0 +1,42 @@
+﻿@model ElektronikaiAlkatreszRaktar.Models.Adatmodel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Részletek</h1>
+
+<div>
+    <h4>Termék Adatok</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Megnevezes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Megnevezes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gyarto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gyarto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BeszerzesiAr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BeszerzesiAr)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" style="width:100px" asp-route-id="@Model?.Id">Módosítás</a> |
+    <a asp-action="Index" class="btn btn-light" style="width:100px">Vissza</a>
+</div>
